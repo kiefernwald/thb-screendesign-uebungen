@@ -9,7 +9,17 @@
         <div id="app">
             <h1>Todo-Liste</h1>
             <ul>
-                <li v-for="(item, index) in todo">{{ item }} <button v-on:click="removeEntry(index)">-</button></li>
+                <li v-for="(item, index) in todo">
+                    <span v-if="editEntry == index">
+                        <input v-model="todo[index]">
+                        <button v-on:click="finishEditEntry">OK</button>
+                    </span>
+                    <span v-else>
+                        {{ item }}
+                        <button v-on:click="removeEntry(index)">-</button>
+                        <button v-on:click="startEditEntry(index)">Bearbeiten</button>
+                    </span>
+                </li>
             </ul>
             <p style="color: green;" v-if="todo.length <= 4">Dann mal los! Du schaffst das!</p>
             <p style="color: red;" v-else>Du hast ganz schön viel vor...</p>
