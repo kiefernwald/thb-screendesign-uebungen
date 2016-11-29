@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>VueJS - Übung 6</title>
+        <script src="../vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <h1>Todo-Liste</h1>
+            <p v-if="showIntroduction">Hier siehst du deine Todo-Items.</p>
+            <ul v-for="item in todo">
+                <li>{{ item }}</li>
+            </ul>
+            <p style="color: green;" v-if="todo.length <= 4">Dann mal los! Du schaffst das!</p>
+            <p style="color: red;" v-else>Du hast ganz schön viel vor...</p>
+
+            <button v-on:click="addEntry(1)">Einen neuen Eintrag hinzufügen</button>
+            <button v-on:click="addEntry(5)">Fünf neue Einträge hinzufügen</button>
+            <button v-on:click="removeLastEntry">Letzten Eintrag entfernen</button>
+        </div>
+    </body>
+    <script src="app.js"></script>
+</html>

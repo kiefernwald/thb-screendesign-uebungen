@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>VueJS - Übung 5</title>
+        <script src="../vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <h1>Todo-Liste</h1>
+            <p v-if="showIntroduction">Hier siehst du deine Todo-Items.</p>
+            <ul>
+                <li v-for="item in todo">{{ item }}</li>
+            </ul>
+            <p style="color: green;" v-if="todo.length <= 4">Dann mal los! Du schaffst das!</p>
+            <p style="color: red;" v-else>Du hast ganz schön viel vor...</p>
+        </div>
+    </body>
+    <script src="app.js"></script>
+</html>
