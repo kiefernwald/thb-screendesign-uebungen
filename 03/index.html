@@ -2,12 +2,13 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>VueJS - Übung 1</title>
+        <title>VueJS - Übung 3</title>
         <script src="../vue.js"></script>
     </head>
     <body>
         <div id="app">
-            <h1>{{ greeting }}</h1>
+            <h1 v-bind:title="greetingTitle">{{ greeting }}</h1>
+            <p>Deine aktuelle Glückszahl: {{ luckyNumber }}</p>
         </div>
         <script src="app.js"></script>
     </body>
