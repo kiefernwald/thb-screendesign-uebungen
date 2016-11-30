@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>VueJS - Übung 7</title>
+        <script src="../vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <h1>Todo-Liste</h1>
+            <ul>
+                <li v-for="(item, index) in todo">
+                    <span v-if="editEntry == index">
+                        <input v-model="todo[index]">
+                        <button v-on:click="finishEditEntry">OK</button>
+                    </span>
+                    <span v-else>
+                        {{ item }}
+                        <button v-on:click="removeEntry(index)">X</button>
+                        <button v-on:click="startEditEntry(index)">...</button>
+                    </span>
+                </li>
+            </ul>
+            <p style="color: green;" v-if="todo.length <= 4">Dann mal los! Du schaffst das!</p>
+            <p style="color: red;" v-else>Du hast ganz schön viel vor...</p>
+
+            <input v-model="currentEntry">
+            <button v-on:click="addEntry()">Hinzufügen</button>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
