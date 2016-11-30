@@ -2,7 +2,7 @@
 var vm = new Vue({
     el: "#app",
     data: {
-        currentEntry: 'Mittagessen gehen',
+        currentEntry: "Mittagessen gehen",
         editEntry: null,
         todo: [
             "JavaScript lernen",
