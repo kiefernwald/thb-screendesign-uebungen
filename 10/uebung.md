@@ -31,10 +31,11 @@ Folgende Informationen könnten nützlich sein:
 
 1. Erstelle die Dateistruktur für das Projekt (du kannst die vergangenen Übungen als Inspirationsquelle nutzen):
     * eine index.html-Datei (Standard HTML5 mit `head`- und `body`-Elementen)
+    * lade VueJS herunter ([hier rechtsklicken und speichern](https://vuejs.org/js/vue.js)) und speichere es im Projektordner
     * eine Haupt-JavaScript-Datei (`app.js`)
-
+1. Binde VueJS im Header-Bereich der HTML-Datei ein (`<script src="vue.js"></script>`)
 1. Erzeuge ein `div`-Element im `body` der HTML-Datei und gib ihr die id `app`
-1. Binde die JavaScript-Datei in der HTML-Datei als letztes Element des `body`-Elements ein
+1. Binde die beiden JavaScript-Datei in der HTML-Datei als letztes Element des `body`-Elements ein
 1. Initialisiere eine neue VueJS-Instanz in der Datei `app.js`. Nenne die Variable, der sie zugewiesen wird, `vm`. Sie soll für das Element mit der id `app` und all dessen Unterelemente nutzbar sein.
 1. Definiere die JSON-Struktur für die Werke in der VueJS-Data-Eigenschaft
 1. Lasse die Elemente als HTML-Struktur rendern. Gib zunächst nur die Bilddatei (`img`-Element), den Namen und den Künstler aus.
