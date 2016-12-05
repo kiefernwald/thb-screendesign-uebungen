@@ -4,8 +4,27 @@ Die folgende Übung kannst du online über [JSFiddle](https://jsfiddle.net) lös
 
 Alternativ kannst du dir auch einen Editor installieren (z.B. [Code](https://code.visualstudio.com) oder [Atom](https://atom.io)) und die JS- und HTML-Datei direkt bearbeiten. Des Resultat kannst du einfach im Browser öffnen (*index.html* öffnen).
 
+Folgendes könnte interessant sein:
+
 * [Listen-Rendering in VueJS](https://vuejs.org/v2/guide/list.html)
 * [Class-Binding in VueJS](https://vuejs.org/v2/guide/class-and-style.html)
+
+* JavaScript Kurzsyntax für if/else:
+
+```javascript
+var render = true;
+
+// Der folgende Code ...
+var wert = null;
+if (render) {
+    wert = 'ja';
+} else {
+    wert = 'nein';
+}
+
+// ... kann auch so geschrieben werden:
+var wert = render ? 'ja' : 'nein';
+```
 
 ## Aufgabe
 
