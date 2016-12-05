@@ -10,14 +10,10 @@
         <div id="app">
             <h1>Unsere Smartphones</h1>
             <ul>
-                <li>
-                    BlackBerry Bold 9900
-                    <small>(Erschienen: 2011, Hersteller: RIM)</small>
-                    <span class="offer">Im Angebot!</span>
-                </li>
-                <li>
-                    iPhone 5s
-                    <small>(Erschienen: 2013, Hersteller: Apple)</small>
+                <li v-for="phone in phones">
+                    {{ phone.model }}
+                    <small>(Erschienen: {{ phone.year }}, Hersteller: {{ phone.manufacturer }})</small>
+                    <span class="offer" v-if="phone.sale">Im Angebot!</span>
                 </li>
             </ul>
         </div>
