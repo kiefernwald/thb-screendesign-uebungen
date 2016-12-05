@@ -8,11 +8,18 @@
     </head>
     <body>
         <div id="app">
-            <h1>Dein Smartphone</h1>
-            <p><strong>Hersteller: </strong> RIM</p>
-            <p><strong>Modell: </strong>BlackBerry Bold 9900</p>
-            <p><strong>Markteinführung: </strong> 2011</p>
-            <p><strong>Updates: </strong> <span class="supported-no">Nein</span></p>
+            <div class="selected" v-if="selectedWork">
+                <h1>{{ selectedWork.title }}</h1>
+                <p><small>Erschaffen <em>{{ selectedWork.created }}</em> von <em>{{ selectedWork.artist }}</em></small></p>
+                <p class="description">{{ selectedWork.text }}</p>
+            </div>
+            <div class="works">
+                <div class="work" v-for="work in works" v-on:click="selectWork(work)">
+                    <img v-bind:src="work.image_url">
+                    <h3>{{ work.title }}</h3>
+                    <p class="artist">({{ work.artist }})</p>
+                </div>
+            </div>
         </div>
         <script src="app.js"></script>
     </body>
