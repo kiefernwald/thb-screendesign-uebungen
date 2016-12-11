@@ -3,6 +3,11 @@
 var vm = new Vue({
     el: "#app",
     data: {
-        smartphone: {}
+        smartphone: {
+            "manufacturer": "Apple",
+            "model": "iPhone SE",
+            "year": 2016,
+            "supported": true
+        }
     }
 })
