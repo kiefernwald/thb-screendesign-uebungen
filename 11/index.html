@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Museum</title>
+        <script src="../vue.js"></script>
+        <link rel="stylesheet" href="app.css">
+    </head>
+    <body>
+        <div id="app">
+            <div class="selected" v-if="selectedWork" v-on:click="closeDetails()">
+                <h1>{{ selectedWork.title }}</h1>
+                <p><small>Erschaffen <em>{{ selectedWork.created }}</em> von <em>{{ selectedWork.artist }}</em></small></p>
+                <p class="description">{{ selectedWork.text }}</p>
+            </div>
+            <div class="filter">
+                <label>Filter:</label>
+                <input v-model="filterText">
+            </div>
+            <div class="works">
+                <div class="work" v-for="work in filteredWorks" v-on:click="selectWork(work)">
+                    <img v-bind:src="work.image_url">
+                    <h3>{{ work.title }}</h3>
+                    <p class="artist">({{ work.artist }})</p>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
