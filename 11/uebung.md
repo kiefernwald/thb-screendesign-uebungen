@@ -20,8 +20,8 @@ function isATower(value) {
     return value.toLowerCase().indexOf("turm") !== -1
 }
 
-var towers = ["Eiffelturm", "Tower Bridge", "Freiheitsstatue", "Fernsehturm"].filter(isBigEnough);
-// towers is ["Eiffelturm", "Fernsehturm"]
+var buildings = ["Eiffelturm", "Tower Bridge", "Freiheitsstatue", "Fernsehturm"].filter(isATower);
+// buildings is ["Eiffelturm", "Fernsehturm"]
 ```
 
 ## Aufgabe
