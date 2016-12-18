@@ -1,0 +1,33 @@
+.work, .selected, .filter {
+    padding: .5rem;
+    margin: .5rem;
+}
+
+.selected {
+    border: 1px solid gray;
+    background-color: lightgray;
+}
+
+.selected.description {
+    font-style: italic;
+}
+
+.work {
+    float: left;
+    border: 1px solid gray;
+}
+
+.work img {
+    height: 12rem;
+    overflow: hidden;
+}
+
+.work .artist {
+    font-size: small;
+    font-style: italic;
+    color: gray;
+}
+
+.filter {
+    background-color: lightblue;
+}
