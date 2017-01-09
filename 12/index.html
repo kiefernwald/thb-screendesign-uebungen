@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Museum</title>
+        <script src="../vue.js"></script>
+        <link rel="stylesheet" href="app.css">
+    </head>
+    <body>
+        <div id="app">
+            <work-detail v-if="selectedWork" v-bind:work="selectedWork" v-on:closed="closeDetails"></work-detail>
+            <div class="filter">
+                <label>Filter:</label>
+                <input v-model="filterText">
+            </div>
+            <div class="works">
+                <work-item v-for="work in filteredWorks" v-on:click.native="selectWork(work)" v-bind:work="work"></work-item>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
