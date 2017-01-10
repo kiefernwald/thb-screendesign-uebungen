@@ -1,0 +1,55 @@
+.work, .selected, .filter, header, footer {
+    padding: .5rem;
+    margin: .5rem;
+}
+
+.selected {
+    border: 1px solid gray;
+    background-color: lightgray;
+}
+
+.selected.description {
+    font-style: italic;
+}
+
+.work {
+    display: inline-block;
+    border: 1px solid gray;
+}
+
+.work img {
+    height: 12rem;
+    overflow: hidden;
+}
+
+.work .artist {
+    font-size: small;
+    font-style: italic;
+    color: gray;
+}
+
+.filter {
+    background-color: lightblue;
+}
+
+.social-link {
+    margin-right: .5rem;
+}
+
+.selected img {
+    width: 95%;
+}
+
+
+header h1 {
+    display: inline;
+}
+
+header .menu {
+    float: right;
+}
+
+header .menu li {
+    display: inline;
+    list-style: none;
+}
