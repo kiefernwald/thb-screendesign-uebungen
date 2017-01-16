@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Museum</title>
+        <script src="../vue.js"></script>
+        <link rel="stylesheet" href="app.css">
+    </head>
+    <body>
+        <div id="app">
+            <museum>
+                <h1 slot="header" v-on:click.prevent="closeDetails">Museum</h1>
+                <ul slot="menu">
+                    <li><a href="#" v-on:click.prevent="closeDetails">Collection</a></li>
+                    <li><a href="#">Visit</a></li>
+                    <li><a href="#">Shop</a></li>
+                </ul>
+
+                <div class="filter" v-if="!selectedWork">
+                    <label>Filter:</label>
+                    <input v-model="filterText">
+                </div>
+                <work-selector v-if="!selectedWork" v-model="selectedWork" v-bind:works="filteredWorks"></work-selector>
+
+                <work-detail v-else v-bind:work="selectedWork" v-on:closed="closeDetails"></work-detail>
+
+                <p slot="footer">(c) 2017 Museum</p>
+                <a class="social-link" href="#" slot="footer">Facebook</a>
+                <a class="social-link" href="#" slot="footer">Twitter</a>
+            </museum>
+        </div>
+        <script src="museum.js"></script>
+        <script src="work-detail.js"></script>
+        <script src="work-item.js"></script>
+        <script src="work-selector.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
